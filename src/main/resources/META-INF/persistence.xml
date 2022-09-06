@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.hn_QuanLyDatVeXe_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.hn.pojo.Staff</class>
+    <class>com.hn.pojo.Account</class>
+    <class>com.hn.pojo.TicketDetail</class>
+    <class>com.hn.pojo.Department</class>
+    <class>com.hn.pojo.Driver</class>
+    <class>com.hn.pojo.CoachLine</class>
+    <class>com.hn.pojo.Vehicle</class>
+    <class>com.hn.pojo.Ticket</class>
+    <class>com.hn.pojo.CoachWay</class>
+    <class>com.hn.pojo.Customer</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/quanlydatvexe?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="833219"/>
+    </properties>
+  </persistence-unit>
+</persistence>
