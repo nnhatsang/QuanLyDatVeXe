@@ -126,4 +126,9 @@ and open the template in the editor.
         <put-attribute name="content" value="/WEB-INF/pages/quan-ly-bo-phan.jsp" />
     </definition>
 
+    <definition name="them-bo-phan" extends="baseLayout">
+        <put-attribute name="title" value="Thêm bộ phận" />
+        <put-attribute name="content" value="/WEB-INF/pages/them-bo-phan.jsp" />
+    </definition>
+
 </tiles-definitions>

@@ -1,5 +1,6 @@
 package com.hn.repository.impl;
 
+import com.hn.pojo.CoachLine;
 import com.hn.pojo.CoachWay;
 import com.hn.pojo.Department;
 import com.hn.pojo.Driver;
@@ -51,17 +52,18 @@ public class DepartmentRepositoryImpl implements DepartmentRepository {
     public List<Department> getDepartments(Map<String, String> params, int page) {
         Session session = this.sessionFactory.getObject().getCurrentSession();
         CriteriaBuilder b = session.getCriteriaBuilder();
-        CriteriaQuery<CoachWay> q = b.createQuery(CoachWay.class);
-        Root root = q.from(CoachWay.class);
+        CriteriaQuery<Department> q = b.createQuery(Department.class);
+        Root root = q.from(Department.class);
         q.select(root);
+
         if(params!=null){
-            List<Predicate> predicates= new ArrayList<>();
+            List<Predicate> predicates = new ArrayList<>();
             String kw= params.get("kw");
-            if(kw!=null&&kw.isEmpty()){
-                Predicate p= b.like(root.get("name").as(String.class),String.format("%%%s%%", kw));
+            if (kw != null && !kw.isEmpty()) {
+                Predicate p = b.like(root.get("name").as(String.class), String.format("%%%s%%", kw));
+                predicates.add(p);
             }
             q.where(predicates.toArray(Predicate[]::new));
-
         }
         Query query = session.createQuery(q);
         return query.getResultList();

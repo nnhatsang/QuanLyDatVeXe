@@ -101,7 +101,7 @@
                     <div class="card card-profile mt-lg-4 mt-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                                <a href="<c:url value="/admin/quan-ly-hanh-trinh"/>">
+                                <a href="<c:url value="/admin/quan-ly-bo-phan"/>">
                                     <div class="p-3 pe-md-0">
                                         <img class="w-100 border-radius-md shadow-lg"
                                              src="https://cdn-icons-png.flaticon.com/512/1642/1642357.png"
